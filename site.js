@@ -64,6 +64,10 @@
     const y = scrollY + innerHeight * .35; let n = -1;
     secs.forEach((s, i) => { if (s && s.offsetTop <= y) n = i; });
     links.forEach((a, i) => a.classList.toggle('on', i === n));
+    // On small screens the links scroll sideways: keep the current one in view.
+    if (n !== spy.last && n >= 0) { const nav = links[n].parentElement;
+      if (nav.scrollWidth > nav.clientWidth) nav.scrollTo({ left: links[n].offsetLeft - (nav.clientWidth - links[n].offsetWidth) / 2, behavior: 'smooth' }); }
+    spy.last = n;
     if (pill) { if (n < 0) pill.style.opacity = 0; else { pill.style.opacity = 1; pill.style.width = links[n].offsetWidth + 'px'; pill.style.transform = `translateX(${links[n].offsetLeft}px)`; } }
     document.querySelector('.hg-top').classList.toggle('scrolled', scrollY > 8);
   }
