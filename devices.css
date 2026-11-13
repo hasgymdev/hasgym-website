@@ -1,0 +1,32 @@
+/* Devices: screenshots framed in Apple's official product bezels (built by tools/build_frames.py).
+   Apple's marketing guidelines: show them as is and straight-on; no tilt, shadow, crop, overlap or 3D;
+   keep iPhone and Apple Watch at their real relative sizes (watch image = 0.73 x iPhone image width). */
+.fr{display:block;max-width:none;height:auto}
+.fr-phone{width:436px}
+.fr-watch{width:318px}
+/* live screen inside a bezel (hero) */
+.frl{position:relative;flex:none}
+.frl>img{position:relative;z-index:1;display:block;width:100%;max-width:none;pointer-events:none}
+.frl>.lv{position:absolute;transform-origin:0 0}
+.frl-phone{width:436px}
+.frl-phone>.lv{left:5.333%;top:2.5%;width:390px;height:844px;border-radius:56px}
+.frl-watch{width:318px}
+.frl-watch>.lv{left:15.968%;top:22.66%;width:204.2px;height:248.8px;border-radius:46px;zoom:1.06}
+/* stage + picker */
+.stage{display:grid;justify-items:center;gap:26px}
+.stage *{box-sizing:border-box;margin:0;padding:0}
+.shots{position:relative;display:grid;place-items:center;width:100%}
+.shot{grid-area:1/1;display:grid;place-items:center;opacity:0;transition:opacity .6s;pointer-events:none}
+.shot.on{opacity:1}
+.pkw{display:flex;gap:10px;align-items:center}
+.pk{position:relative;display:flex;padding:4px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1)}
+.pk .gl{position:absolute;top:4px;bottom:4px;left:0;border-radius:999px;background:rgba(255,255,255,.16);transition:transform .45s cubic-bezier(.2,.8,.2,1),width .45s}
+.pk button{position:relative;appearance:none;border:0;background:none;color:#aebcb0;font:inherit;font-size:14px;font-weight:600;padding:9px 18px;cursor:pointer;transition:color .3s}
+.pk button.on{color:#fff}
+.pk button u{position:absolute;left:18px;right:18px;bottom:4px;height:2px;border-radius:2px;overflow:hidden}
+.pk button.on u::after{content:"";display:block;height:100%;width:100%;background:var(--g,#2fa046);transform-origin:0 0;animation:pkrun 4s linear both}
+.pkw.paused button.on u::after{animation:none}
+@keyframes pkrun{from{transform:scaleX(0)}}
+.pp{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.07);color:#aebcb0;cursor:pointer;font-size:11px}
+.cap{min-height:1.5em;text-align:center;color:#9fb1a2;font-size:16px;max-width:520px}
+.shots{min-height:470px}
