@@ -50,11 +50,11 @@
   }
   if (document.querySelector('[data-live]')) tick();
 
-  // Overview cards: three screens each. A tap shows the next one; left alone, they change every 3 seconds.
+  // Overview cards: three screens each. A tap shows the next one; left alone, they change every 10 seconds.
   document.querySelectorAll('.hg-oc').forEach(card => { const imgs = [...card.querySelectorAll('.hg-rot img')], dots = [...card.querySelectorAll('.hg-dots i')];
     let n = +new URLSearchParams(location.search).get('rot') || 0, timer;
     const show = () => { imgs.forEach((im, k) => im.classList.toggle('on', k === n % imgs.length)); dots.forEach((d, k) => d.classList.toggle('on', k === n % imgs.length)); };
-    const auto = () => { clearInterval(timer); if (!location.search.includes('static')) timer = setInterval(() => { n++; show(); }, 3000); };
+    const auto = () => { clearInterval(timer); if (!location.search.includes('static')) timer = setInterval(() => { n++; show(); }, 10000); };
     card.addEventListener('click', () => { n++; show(); auto(); }); show(); auto(); });
 
   // Sticky header: move the highlight to the section in view.

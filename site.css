@@ -170,3 +170,19 @@ button.hg-oc{font:inherit;color:inherit;text-align:left;cursor:pointer;appearanc
 .hg-dots{display:flex;justify-content:center;gap:7px;margin-top:20px}
 .hg-dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s,width .3s}
 .hg-dots i.on{background:var(--g);width:20px;border-radius:4px}
+/* legal pages */
+.hg-legal{max-width:760px;margin:0 auto;padding:70px 24px 90px;color:#cfd8d0;font-size:17px;line-height:1.65}
+.hg-legal h1{font-size:52px;line-height:1.05;letter-spacing:-.04em;margin:14px 0 14px;color:#f3f7f3}
+.hg-legal h2{font-size:23px;line-height:1.25;letter-spacing:-.02em;font-weight:700;margin:44px 0 12px;color:#f3f7f3}
+.hg-legal h2 span{color:inherit}
+.hg-legal p{margin:0 0 14px}.hg-legal ul{margin:0 0 14px 22px}.hg-legal li{margin-bottom:8px}
+.hg-legal a{color:var(--g);text-decoration:underline;text-underline-offset:3px}
+.hg-legal strong{color:#f3f7f3;font-weight:600}
+.hg-date{color:#7f8d82;font-size:15px}
+.hg-sum{margin:34px 0 0;padding:26px 30px 16px;border-radius:24px;background:rgba(34,140,58,.1);border:1px solid rgba(34,140,58,.35)}
+.hg-sum h2{margin-top:0}
+.hg-legal table{width:100%;border-collapse:collapse;margin:8px 0 18px;font-size:15.5px}
+.hg-legal th{text-align:left;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:#7f8d82;font-weight:600;padding:10px 12px 10px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.hg-legal td{padding:12px 12px 12px 0;border-bottom:1px solid rgba(255,255,255,.07);vertical-align:top}
+.hg-legal td:first-child{color:#f3f7f3;font-weight:600;white-space:nowrap}
+.hg-nav-legal a.on{background:rgba(34,140,58,.2);box-shadow:inset 0 0 0 1px rgba(34,140,58,.45)}
