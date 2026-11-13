@@ -186,3 +186,7 @@ button.hg-oc{font:inherit;color:inherit;text-align:left;cursor:pointer;appearanc
 .hg-legal td{padding:12px 12px 12px 0;border-bottom:1px solid rgba(255,255,255,.07);vertical-align:top}
 .hg-legal td:first-child{color:#f3f7f3;font-weight:600;white-space:nowrap}
 .hg-nav-legal a.on{background:rgba(34,140,58,.2);box-shadow:inset 0 0 0 1px rgba(34,140,58,.45)}
+/* before launch: a plain "coming soon" button; Apple's badge must not be dimmed or altered */
+.hg-soon{display:inline-flex;flex-direction:column;justify-content:center;height:55px;margin:14px;padding:0 22px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#a9b6ab;line-height:1.15;text-align:left;cursor:default}
+.hg-soon small{font-size:11.5px;font-weight:500}.hg-soon b{font-size:19px;color:#d5ddd6;font-weight:600}
+.hg-dl-soon{background:#1f2a22;color:#6f7d72;cursor:default}
